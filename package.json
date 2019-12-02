@@ -1,0 +1,7 @@
+{
+  "name": "advent-of-code",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Vadim Brodsky <vadim.brodsky@gmail.com>",
+  "license": "MIT"
+}
