@@ -11,8 +11,9 @@ module.exports = {
   },
 
   day02_part1_answer() {
-    input[1] = 12;
-    input[2] = 2;
-    assert.equal(optCodeComputer(input)[0], 5098658);
+    const instructions = input();
+    instructions[1] = 12;
+    instructions[2] = 2;
+    assert.equal(optCodeComputer(instructions)[0], 5098658);
   },
 };

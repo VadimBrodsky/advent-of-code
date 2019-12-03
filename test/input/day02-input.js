@@ -1,4 +1,4 @@
-const input = [
+const input = () => [
   1,
   0,
   0,

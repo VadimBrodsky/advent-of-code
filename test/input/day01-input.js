@@ -1,4 +1,4 @@
-const input = [
+const input = () => [
   103910,
   133712,
   82560,

@@ -11,7 +11,7 @@ module.exports = {
   },
 
   day01_part1_answer() {
-    const answer = input.reduce((acc, i) => acc + fuelRequired(i), 0);
+    const answer = input().reduce((acc, i) => acc + fuelRequired(i), 0);
     assert.equal(answer, 3226488);
   },
 
@@ -22,7 +22,7 @@ module.exports = {
   },
 
   day01_part2_answer() {
-    const answer = input.reduce((acc, i) => acc + fuelRequiredWithFuelMass(i), 0);
+    const answer = input().reduce((acc, i) => acc + fuelRequiredWithFuelMass(i), 0);
     assert.equal(answer, 4836845);
   },
 };
