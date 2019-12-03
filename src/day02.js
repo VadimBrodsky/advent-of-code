@@ -1,19 +1,24 @@
 // Day 2, Question 1
 const optCodeComputer = (input) => {
-  return (function recurse(input, marker) {
-    const [operation, inputALoc, inputBLoc, outputLoc] = input.slice(marker, marker + 4);
+  return (function recurse(input, instructionPointer) {
+    const INSTRUCTION_LENGTH = 4;
 
-    switch (operation) {
+    const [instruction, param0Address, param1Address, outputLoc] = input.slice(
+      instructionPointer,
+      instructionPointer + INSTRUCTION_LENGTH,
+    );
+
+    switch (instruction) {
       case 1:
-        input[outputLoc] = input[inputALoc] + input[inputBLoc];
-        return recurse(input, marker + 4);
+        input[outputLoc] = input[param0Address] + input[param1Address];
+        return recurse(input, instructionPointer + INSTRUCTION_LENGTH);
       case 2:
-        input[outputLoc] = input[inputALoc] * input[inputBLoc];
-        return recurse(input, marker + 4);
+        input[outputLoc] = input[param0Address] * input[param1Address];
+        return recurse(input, instructionPointer + INSTRUCTION_LENGTH);
       case 99:
         return input;
       default:
-        throw new Error(`Unknown operation ${operation}`);
+        throw new Error(`Unknown instruction ${instruction}`);
     }
   })(input, 0);
 };
