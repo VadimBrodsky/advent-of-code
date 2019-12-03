@@ -1,6 +1,6 @@
 const { assert } = require('chai');
-const { fuelRequired, fuelRequiredWithFuelMass } = require('./day1.js');
-const input = require('./input.js');
+const { fuelRequired, fuelRequiredWithFuelMass } = require('../src/day01.js');
+const input = require('./input/day01-input.js');
 
 module.exports = {
   question1_samples() {

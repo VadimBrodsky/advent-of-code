@@ -10,6 +10,6 @@
     "teenytest": "^5.2.1"
   },
   "scripts": {
-    "test": "teenytest ./**/*.test.js"
+    "test": "teenytest ./test/**/*.test.js"
   }
 }

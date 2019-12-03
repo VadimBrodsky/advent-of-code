@@ -1,6 +1,6 @@
 const { assert } = require('chai');
-const { optCodeComputer } = require('./day2.js');
-const input = require('./input.js');
+const { optCodeComputer } = require('../src/day02.js');
+const input = require('./input/day02-input.js');
 
 module.exports = {
   question2_samples() {
