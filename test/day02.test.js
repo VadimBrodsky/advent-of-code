@@ -1,5 +1,5 @@
 const { assert } = require('chai');
-const { optCodeComputer } = require('../src/day02.js');
+const { optCodeComputer, nounAndVerbFinder } = require('../src/day02.js');
 const input = require('./input/day02-input.js');
 
 module.exports = {
@@ -12,8 +12,19 @@ module.exports = {
 
   day02_part1_answer() {
     const instructions = input();
-    instructions[1] = 12;
-    instructions[2] = 2;
+    const noun = 12;
+    const verb = 2;
+
+    instructions[1] = noun;
+    instructions[2] = verb;
+
     assert.equal(optCodeComputer(instructions)[0], 5098658);
+  },
+
+  day02_part2_answer() {
+    const [noun, verb] = nounAndVerbFinder({ input: input(), desiredOutput: 19690720 });
+    assert.notEqual(noun, -1);
+    assert.notEqual(verb, -1);
+    assert.equal(100 * noun + verb, 5064);
   },
 };
