@@ -5,6 +5,7 @@
   "author": "Vadim Brodsky <vadim.brodsky@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "chai": "^4.2.0",
     "prettier": "1.19.1",
     "teenytest": "^5.2.1"
   },
